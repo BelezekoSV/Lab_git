@@ -29,7 +29,6 @@ class Window(tk.Tk):
                 self.clear_label_image()
             self.box.delete(0, END)
             path = filedialog.askopenfilename(title='Open *.jpg', type=".jpg")
-            #self.send_path = self.send_path.replace('/', "\\")
             print(path)
             if path:
                 self.send_path = path
