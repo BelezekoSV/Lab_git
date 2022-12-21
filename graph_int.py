@@ -1,8 +1,8 @@
-import tkinter as tk  # graphics lib (pip3 install tkinter)
+import tkinter as tk
 from tkinter import *
 from tkinter import filedialog
-from client import *  # app client
-from PIL import Image, ImageTk  # graphics lib (-//- PIL)
+from client import *
+from PIL import Image, ImageTk
 
 
 class Window(tk.Tk):
@@ -58,9 +58,7 @@ class Window(tk.Tk):
         try:
             if self.send_path != '':
                 im = get_watermark_image(self.send_path)
-                # a function from the client that receives an image with a watermark
                 save_image(im)
-                # a function from the client that save image with a watermark
                 self.box.config(fg='green')
                 self.box.insert(END, '[Success] Image saved')
                 self.box.config(fg='black')
